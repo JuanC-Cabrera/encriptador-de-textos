@@ -3,29 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Encriptador de texto - Alura Challenge ONE</title>
 </head>
 <body>
     <header>
-        <img src="img/Logo.png" alt="Logotipo de Alura">
+      <a href="https://app.aluracursos.com/user/juan-c-cabrerahernandez" target="_blank"> <img class="logos" id="logo-alura" src="img/Logo.png" alt="Logotipo de Alura"></a>
     </header>
-    <main>
-        <div>
-            <input type="text" placeholder="Ingrese el texto aquí">
-        <small>Solo letras minúsculas y sin acentos, favor de no agregar caracteres especiales.</smal>
-        <button>Encriptar</button>
-        <button>Desencriptar</button>
+    <main> 
+        <div id="col1">
+            <div id="contenedor">
+                <textarea placeholder="Ingrese el texto aquí"></textarea>
+                <small>Solo letras minúsculas y sin acentos, favor de no agregar caracteres especiales.</smal>
+               <div>
+                <button>Encriptar</butto>
+                    <button>Desencriptar</button>
+               </div>
+                </div>
         </div>
 
-        <div>
-            <img src="img/Muñeco.png" alt="Muñeco sosteniendo una lupa mientras observa un diamante">
+        <div id="col2">
             <p>Ningun mensaje fue encontrado</p>
             <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
     </main>
     <footer>
-        <img src="img/linkedin.png" alt="Logotipo de linkedin">
-        <img src="img/github.png" alt="Logotipo de github">
+        <img class="logos" src="img/linkedin.png" alt="Logotipo de linkedin">
+        <img class="logos" src="img/github.png" alt="Logotipo de github">
     </footer>
 </body>
 </html>
