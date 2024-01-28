@@ -1,35 +1,81 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <title>Encriptador de texto - Alura Challenge ONE</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-      <a href="https://app.aluracursos.com/user/juan-c-cabrerahernandez" target="_blank"> <img class="logos" id="logo-alura" src="img/Logo.png" alt="Logotipo de Alura"></a>
+      <a
+        href="https://app.aluracursos.com/user/juan-c-cabrerahernandez"
+        target="_blank"
+      >
+        <img
+          class="logos"
+          id="logo-alura"
+          src="img/Logo.png"
+          alt="Logotipo de Alura"
+      /></a>
     </header>
-    <main> 
-        <div id="col1">
-            <div id="contenedor">
-                <textarea placeholder="Ingrese el texto aquí"></textarea>
-                <small>Solo letras minúsculas y sin acentos, favor de no agregar caracteres especiales.</smal>
-               <div>
-                <button>Encriptar</butto>
-                    <button>Desencriptar</button>
-               </div>
-                </div>
+    <main>
+      <div id="col1">
+        <div class="contenedor">
+          <textarea placeholder="Ingrese el texto aquí"></textarea>
+          <small>
+            🛈 Solo letras minúsculas y sin acentos, favor de no agregar
+            caracteres especiales.</small
+          >
+          <div id="cont-botones">
+            <button class="boton">Encriptar</button>
+            <button class="boton">Desencriptar</button>
+          </div>
         </div>
+      </div>
 
-        <div id="col2">
-            <p>Ningun mensaje fue encontrado</p>
-            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+      <div id="col2">
+        <div id="resultado">
+          <div class="box-img">
+            <img
+              src="img/Muñeco.png"
+              alt="Muñeco sosteniendo una lupa mientras observa un diamante"
+            />
+          </div>
+
+          <h2>Ningun mensaje fue encontrado</h2>
+          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
         </div>
+      </div>
     </main>
     <footer>
-        <img class="logos" src="img/linkedin.png" alt="Logotipo de linkedin">
-        <img class="logos" src="img/github.png" alt="Logotipo de github">
+      <div class="col-footer">
+        <a
+          href="https://www.linkedin.com/in/juan-carlos-cabrera-hern%C3%A1ndez-995082273/"
+          target="_blank"
+          ><img
+            class="logos logos-redes zoom"
+            src="img/linkedin.png"
+            alt="Logotipo de linkedin"
+        /></a>
+
+        <a href="https://github.com/JuanC-Cabrera" target="_blank">
+          <img
+            class="logos logos-redes zoom"
+            src="img/github.png"
+            alt="Logotipo de github"
+        /></a>
+      </div>
+      <div class="col-footer"><p>Made by JuanC Cabrera</p></div>
+      <div class="col-footer">
+        <p>Copyright © 2024. All rights are reserved</p>
+      </div>
     </footer>
-</body>
+  </body>
 </html>
