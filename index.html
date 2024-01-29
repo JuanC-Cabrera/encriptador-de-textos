@@ -9,10 +9,24 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="alert.css" />
+
     <title>Encriptador de texto - Alura Challenge ONE</title>
   </head>
   <body>
+    <div class="alert start">
+      <span class="fas exclamation">🛈</span>
+      <span class="msg"
+        >Aviso: No es posible usar caracteres que no sean letras
+        minúsculas!</span
+      >
+      <span class="close-btn" onclick="ocultarAlerta()">
+        <span class="fas cross">X</span>
+      </span>
+    </div>
+
     <header>
       <a
         href="https://app.aluracursos.com/user/juan-c-cabrerahernandez"
@@ -28,7 +42,7 @@
     <main>
       <div id="col1">
         <div class="contenedor">
-          <textarea placeholder="Ingrese el texto aquí"></textarea>
+          <textarea placeholder="Ingrese el texto aquí" id="cadena"></textarea>
           <small>
             🛈 Solo letras minúsculas y sin acentos, favor de no agregar
             caracteres especiales.</small
@@ -77,5 +91,6 @@
         <p>Copyright © 2024. All rights are reserved</p>
       </div>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
