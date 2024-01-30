@@ -52,7 +52,9 @@
             caracteres especiales.</small
           >
           <div id="cont-botones">
-            <button id="boton1" class="boton" disabled>Encriptar</button>
+            <button id="boton1" class="boton" disabled onclick="encriptar()">
+              Encriptar
+            </button>
             <button id="boton2" class="boton" disabled>Desencriptar</button>
           </div>
         </div>
@@ -60,15 +62,23 @@
 
       <div id="col2">
         <div id="resultado">
-          <div class="box-img">
-            <img
-              src="img/Muñeco.png"
-              alt="Muñeco sosteniendo una lupa mientras observa un diamante"
-            />
+          <div class="ocultar" id="content-resultado">
+            <p>El texto:</p>
+            <p id="titulo-resultado"></p>
+            <p>encriptado es:</p>
+            <p id="texto-resultado"></p>
           </div>
+          <div id="cont-ocultar">
+            <div class="box-img">
+              <img
+                src="img/Muñeco.png"
+                alt="Muñeco sosteniendo una lupa mientras observa un diamante"
+              />
+            </div>
 
-          <h2>Ningun mensaje fue encontrado</h2>
-          <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            <p>Ningun mensaje fue encontrado</p>
+            <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+          </div>
         </div>
       </div>
     </main>
