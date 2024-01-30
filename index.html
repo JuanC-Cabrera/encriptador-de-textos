@@ -11,8 +11,8 @@
     />
 
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="alert.css" />
-
+    <link rel="stylesheet" href="alerts.css" />
+    <link rel="shortcut icon" href="img/Oracle-Next-Education.ico" />
     <title>Encriptador de texto - Alura Challenge ONE</title>
   </head>
   <body>
@@ -42,14 +42,18 @@
     <main>
       <div id="col1">
         <div class="contenedor">
-          <textarea placeholder="Ingrese el texto aquí" id="cadena"></textarea>
+          <textarea
+            placeholder="Ingrese el texto aquí"
+            id="cadena"
+            onkeyup="estadoBoton(this.value)"
+          ></textarea>
           <small>
             🛈 Solo letras minúsculas y sin acentos, favor de no agregar
             caracteres especiales.</small
           >
           <div id="cont-botones">
-            <button class="boton">Encriptar</button>
-            <button class="boton">Desencriptar</button>
+            <button id="boton1" class="boton" disabled>Encriptar</button>
+            <button id="boton2" class="boton" disabled>Desencriptar</button>
           </div>
         </div>
       </div>

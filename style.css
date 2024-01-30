@@ -121,6 +121,18 @@ footer {
   border: none;
   font-weight: bold;
   font-size: 15px;
+  background: #fff;
+  color: #010409;
+}
+.activo {
+  background: #0c3272;
+  color: #fff;
+  border: 1px solid #686767;
+  cursor: pointer;
+  transition: transform 0.5s;
+}
+.activo:hover {
+  transform: scale(1.05);
 }
 
 .zoom {
