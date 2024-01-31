@@ -18,16 +18,16 @@ main {
 }
 
 #col1 {
+  width: 65%;
   background-color: #0d1117;
   border-right: 1px solid #686767;
-  width: 65vw;
   height: 530px;
   padding: 20px;
 }
 
 #col2 {
+  width: 35%;
   background-color: #30363d;
-  width: 35vw;
   padding: 20px;
   height: 530px;
 }
@@ -60,7 +60,18 @@ textarea {
   background-color: white;
   border-radius: 25px;
   height: 100%;
-  overflow: hidden;
+  overflow-y: auto;
+}
+
+.texto-principal {
+  font-size: x-large;
+  font-weight: bold;
+  margin: 10px 0px 10px 0px;
+  overflow-wrap: break-word;
+}
+
+#titulo-resultado {
+  font-style: italic;
 }
 
 .box-img {
