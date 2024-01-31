@@ -16,6 +16,22 @@ cadena.addEventListener("keydown", (e) => {
   }
 });
 
+cadena.addEventListener("paste", (e) => {
+  const caracterValido = /[a-zñ ]/;
+  var cadena = e.clipboardData.getData("text/plain");
+  var bandera = "ok";
+
+  for (let i = 0; i < cadena.length; i++) {
+    if (!caracterValido.test(cadena[i])) {
+      bandera = "";
+      mostrarAlerta();
+      e.preventDefault();
+    }
+  }
+
+  estadoBoton(bandera);
+});
+
 //Funcion para mostrar la alerta
 function mostrarAlerta() {
   var alert = document.querySelector(".alert");
@@ -35,7 +51,15 @@ function ocultarAlerta() {
 function estadoBoton(valor) {
   let button1 = document.querySelector("#boton1");
   let button2 = document.querySelector("#boton2");
-  if (valor === "") {
+  var soloEspacios = true;
+
+  for (let i = 0; i < valor.length; i++) {
+    if (valor[i] != " ") {
+      soloEspacios = false;
+    }
+  }
+
+  if (valor === "" || soloEspacios == true) {
     button1.disabled = true;
     button2.disabled = true;
     button1.className = "boton";
