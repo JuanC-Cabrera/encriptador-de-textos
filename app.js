@@ -105,6 +105,38 @@ function encriptar() {
   document.querySelector("#aviso-copiado").className = "ocultar";
 }
 
+function desencriptar() {
+  texto = obtenerTexto();
+  var resultado = "";
+  for (let i = 0; i < texto.length; i++) {
+    if (texto[i] == "a") {
+      resultado = resultado + "a";
+      i = i + 1;
+    } else if (texto[i] == "e") {
+      resultado = resultado + "e";
+      i = i + 4;
+    } else if (texto[i] == "i") {
+      resultado = resultado + "i";
+      i = i + 3;
+    } else if (texto[i] == "o") {
+      resultado = resultado + "o";
+      i = i + 3;
+    } else if (texto[i] == "u") {
+      resultado = resultado + "u";
+      i = i + 3;
+    } else {
+      resultado = resultado + texto[i];
+    }
+  }
+  ocultarMuñeco();
+  desactivarBotones();
+  limpiarTextarea();
+  mostrarResultado();
+  mostrarResultado(texto, resultado, "encriptado");
+  document.querySelector("#boton-copiar").className = "";
+  document.querySelector("#aviso-copiado").className = "ocultar";
+}
+
 function desactivarBotones() {
   document.querySelector("#boton1").className = "boton";
   document.querySelector("#boton2").className = "boton";
@@ -138,7 +170,6 @@ const copiarContenido = async () => {
   try {
     await navigator.clipboard.writeText(texto);
     document.querySelector("#boton-copiar").className = "ocultar";
-
     document.querySelector("#aviso-copiado").className = "";
   } catch (err) {
     console.error("Error al copiar: ", err);
