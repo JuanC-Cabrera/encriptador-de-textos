@@ -175,3 +175,13 @@ const copiarContenido = async () => {
     console.error("Error al copiar: ", err);
   }
 };
+
+function cambiarColores() {
+  document.getElementById("toggle").classList.toggle("active");
+  document.querySelector("header").classList.toggle("active");
+  document.getElementById("col1").classList.toggle("active");
+  document.querySelector("small").classList.toggle("active");
+  document.getElementById("col2").classList.toggle("active");
+  document.getElementById("resultado").classList.toggle("active");
+  document.querySelector("footer").classList.toggle("active");
+}

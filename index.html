@@ -38,6 +38,13 @@
           src="img/Logo.png"
           alt="Logotipo de Alura"
       /></a>
+      <div id="dia-noche">
+        <img class="logos" src="img/sun.png" alt="Icono de sol" />
+        <div onclick="cambiarColores()" id="container-toggle">
+          <div id="toggle"></div>
+        </div>
+        <img class="logos" src="img/moon.png" alt="Icono de luna" />
+      </div>
     </header>
     <main>
       <div id="col1">
@@ -56,7 +63,9 @@
             <button id="boton1" class="boton" disabled onclick="encriptar()">
               Encriptar
             </button>
-            <button id="boton2" class="boton" disabled>Desencriptar</button>
+            <button id="boton2" class="boton" disabled onclick="desencriptar()">
+              Desencriptar
+            </button>
           </div>
         </div>
       </div>
@@ -99,16 +108,13 @@
           href="https://www.linkedin.com/in/juan-carlos-cabrera-hern%C3%A1ndez-995082273/"
           target="_blank"
           ><img
-            class="logos logos-redes zoom"
+            class="logos zoom"
             src="img/linkedin.png"
             alt="Logotipo de linkedin"
         /></a>
 
         <a href="https://github.com/JuanC-Cabrera" target="_blank">
-          <img
-            class="logos logos-redes zoom"
-            src="img/github.png"
-            alt="Logotipo de github"
+          <img class="logos zoom" src="img/github.png" alt="Logotipo de github"
         /></a>
       </div>
       <div class="col-footer"><p>Made by JuanC Cabrera</p></div>
