@@ -138,6 +138,7 @@ const copiarContenido = async () => {
   try {
     await navigator.clipboard.writeText(texto);
     document.querySelector("#boton-copiar").className = "ocultar";
+
     document.querySelector("#aviso-copiado").className = "";
   } catch (err) {
     console.error("Error al copiar: ", err);
