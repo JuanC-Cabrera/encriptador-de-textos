@@ -44,6 +44,30 @@ textarea,
   width: 100%;
   font-weight: bold;
 }
+
+.mostrar-resultado {
+  height: 350px;
+  overflow-y: auto;
+}
+
+#boton-copiar {
+  width: 90%;
+  height: 65px;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  background: #0c3272;
+  color: #fff;
+  border: 1px solid #686767;
+  cursor: pointer;
+  transition: transform 0.5s;
+  margin-top: 25px;
+}
+
+#boton-copiar:hover {
+  transform: scale(1.1);
+}
+
 textarea {
   height: 310px;
   resize: none;
@@ -60,7 +84,6 @@ textarea {
   background-color: white;
   border-radius: 25px;
   height: 100%;
-  overflow-y: auto;
 }
 
 .texto-principal {
@@ -70,8 +93,13 @@ textarea {
   overflow-wrap: break-word;
 }
 
+#texto-resultado {
+  color: #0c3272;
+}
+
 #titulo-resultado {
   font-style: italic;
+  font-size: small;
 }
 
 .box-img {

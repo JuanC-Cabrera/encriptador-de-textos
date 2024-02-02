@@ -101,6 +101,8 @@ function encriptar() {
   limpiarTextarea();
   mostrarResultado();
   mostrarResultado(texto, resultado, "encriptado");
+  document.querySelector("#boton-copiar").className = "";
+  document.querySelector("#aviso-copiado").className = "ocultar";
 }
 
 function desactivarBotones() {
@@ -130,3 +132,14 @@ function mostrarResultado(textoOriginal, resultado, funcion) {
 function limpiarTextarea() {
   document.querySelector("#cadena").value = "";
 }
+
+const copiarContenido = async () => {
+  let texto = document.getElementById("texto-resultado").innerHTML;
+  try {
+    await navigator.clipboard.writeText(texto);
+    document.querySelector("#boton-copiar").className = "ocultar";
+    document.querySelector("#aviso-copiado").className = "";
+  } catch (err) {
+    console.error("Error al copiar: ", err);
+  }
+};

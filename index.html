@@ -64,10 +64,20 @@
       <div id="col2">
         <div id="resultado">
           <div class="ocultar" id="content-resultado">
-            <p class="texto-principal">El texto:</p>
-            <p id="titulo-resultado"></p>
-            <p id="tipoFuncion" class="texto-principal"></p>
-            <p class="texto-principal" id="texto-resultado"></p>
+            <div class="mostrar-resultado">
+              <p class="texto-principal">El texto:</p>
+              <p id="titulo-resultado"></p>
+              <p id="tipoFuncion" class="texto-principal"></p>
+              <p class="texto-principal" id="texto-resultado"></p>
+            </div>
+            <div>
+              <button onclick="copiarContenido()" id="boton-copiar">
+                Copiar resultado
+              </button>
+              <span id="aviso-copiado" class="ocultar" style="color: #40d438">
+                ✓ El resultado se copio a el portapapeles
+              </span>
+            </div>
           </div>
           <div id="cont-ocultar">
             <div class="box-img">
