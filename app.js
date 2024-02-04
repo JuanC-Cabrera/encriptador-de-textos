@@ -38,7 +38,7 @@ function mostrarAlerta() {
   alert.className = "alert show";
   setTimeout(function () {
     ocultarAlerta();
-  }, 3000);
+  }, 3500);
 }
 
 //Funcion para ocultar la alerta

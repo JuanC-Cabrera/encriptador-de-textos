@@ -17,13 +17,13 @@
   </head>
   <body>
     <div class="alert start">
-      <span class="fas exclamation">🛈</span>
-      <span class="msg"
-        >Aviso: No es posible usar caracteres que no sean letras
-        minúsculas!</span
-      >
+      <p class="fas exclamation">🛈</p>
+      <p style="font-weight: bold">Precaución:</p>
+      <p class="msg">
+        No es posible usar caracteres que no sean letras minúsculas!
+      </p>
       <span class="close-btn" onclick="ocultarAlerta()">
-        <span class="fas cross">X</span>
+        <span class="fas cross">Ok</span>
       </span>
     </div>
 
@@ -48,25 +48,23 @@
     </header>
     <main>
       <div id="col1">
-        <div class="contenedor">
-          <textarea
-            placeholder="Ingrese el texto aquí"
-            id="cadena"
-            onchange="estadoBoton(this.value)"
-            onkeyup="estadoBoton(this.value)"
-          ></textarea>
-          <small>
-            🛈 Solo letras minúsculas y sin acentos, favor de no agregar
-            caracteres especiales.</small
-          >
-          <div id="cont-botones">
-            <button id="boton1" class="boton" disabled onclick="encriptar()">
-              Encriptar
-            </button>
-            <button id="boton2" class="boton" disabled onclick="desencriptar()">
-              Desencriptar
-            </button>
-          </div>
+        <textarea
+          placeholder="Ingrese el texto aquí"
+          id="cadena"
+          onchange="estadoBoton(this.value)"
+          onkeyup="estadoBoton(this.value)"
+        ></textarea>
+        <small>
+          🛈 Solo letras minúsculas y sin acentos, favor de no agregar caracteres
+          especiales.</small
+        >
+        <div id="cont-botones">
+          <button id="boton1" class="boton" disabled onclick="encriptar()">
+            Encriptar
+          </button>
+          <button id="boton2" class="boton" disabled onclick="desencriptar()">
+            Desencriptar
+          </button>
         </div>
       </div>
 
@@ -79,7 +77,7 @@
               <p id="tipoFuncion" class="texto-principal"></p>
               <p class="texto-principal" id="texto-resultado"></p>
             </div>
-            <div>
+            <div class="cont-boton-copiar">
               <button onclick="copiarContenido()" id="boton-copiar">
                 Copiar resultado
               </button>
@@ -103,24 +101,25 @@
       </div>
     </main>
     <footer>
-      <div class="col-footer">
+      <div>
         <a
           href="https://www.linkedin.com/in/juan-carlos-cabrera-hern%C3%A1ndez-995082273/"
           target="_blank"
           ><img
-            class="logos zoom"
+            class="logos zoom redes"
             src="img/linkedin.png"
             alt="Logotipo de linkedin"
         /></a>
 
         <a href="https://github.com/JuanC-Cabrera" target="_blank">
-          <img class="logos zoom" src="img/github.png" alt="Logotipo de github"
+          <img
+            class="logos zoom redes"
+            src="img/github.png"
+            alt="Logotipo de github"
         /></a>
       </div>
-      <div class="col-footer"><p>Made by JuanC Cabrera</p></div>
-      <div class="col-footer">
-        <p>Copyright © 2024. All rights are reserved</p>
-      </div>
+      <p>Made by JuanC Cabrera</p>
+      <p>Copyright © 2024. All rights are reserved</p>
     </footer>
     <script src="app.js"></script>
   </body>
