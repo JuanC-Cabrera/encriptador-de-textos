@@ -53,7 +53,7 @@
           id="cadena"
           onchange="estadoBoton(this.value)"
           onkeyup="estadoBoton(this.value)"
-          pattern="[a-zñ ]"
+          oninput="validar(this.value)"
         ></textarea>
         <small>
           🛈 Solo letras minúsculas y sin acentos, favor de no agregar caracteres

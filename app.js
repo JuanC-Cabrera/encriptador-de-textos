@@ -1,20 +1,15 @@
-//Variable para obtener todo lo relacionado con la etiqueta <textarea>
-var cadena = document.getElementById("cadena");
-//Se valida en tiempo real el evento de precionar una tecla esta informacion se almacena en la variable 'e'
-cadena.addEventListener("keydown", (e) => {
-  //La variable caracterValido limita los caracteres que son admitidos a las letras de la 'a' a la 'z'
+function validar(valor) {
   const caracterValido = /[a-zñ ]/;
-  /*
-    Aqui se hace la validacion de que el caracter ingresado NO sea igual a un caracterValido.
-    En caso de no ser un caracter valido:
-    - Se limita la accion a no poder escribirlo en nuestro textarea con preventDefault()
-    - Se muestra una alerta para infornar al usuario que cometio un error ingresando un caracter invalido
-    */
-  if (!caracterValido.test(e.key)) {
-    mostrarAlerta();
-    e.preventDefault();
+  var cadenaModificada = "";
+  for (let i = 0; i < valor.length; i++) {
+    if (!caracterValido.test(valor[i])) {
+      mostrarAlerta();
+    } else {
+      cadenaModificada = cadenaModificada + valor[i];
+    }
   }
-});
+  document.querySelector("#cadena").value = cadenaModificada;
+}
 
 cadena.addEventListener("paste", (e) => {
   const caracterValido = /[a-zñ ]/;
