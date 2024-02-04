@@ -1,7 +1,7 @@
 //Variable para obtener todo lo relacionado con la etiqueta <textarea>
 var cadena = document.getElementById("cadena");
 //Se valida en tiempo real el evento de precionar una tecla esta informacion se almacena en la variable 'e'
-cadena.addEventListener("keydown", (e) => {
+cadena.addEventListener("touchend", (e) => {
   //La variable caracterValido limita los caracteres que son admitidos a las letras de la 'a' a la 'z'
   const caracterValido = /[a-zñ ]/;
   /*
@@ -45,16 +45,6 @@ function mostrarAlerta() {
 function ocultarAlerta() {
   var alert = document.querySelector(".alert");
   alert.className = "alert hide";
-}
-
-function validarCaracteres(valor) {
-  const valido = /[a-zñ ]/;
-  for (let i = 0; i < valor.length; i++) {
-    if (valor[i] != valido) {
-      mostrarAlerta();
-      valor.preventDefault();
-    }
-  }
 }
 
 //Funcion para activar o desactivar los botones
