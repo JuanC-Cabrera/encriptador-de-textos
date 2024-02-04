@@ -47,6 +47,16 @@ function ocultarAlerta() {
   alert.className = "alert hide";
 }
 
+function validarCaracteres(valor) {
+  const valido = /[a-zñ ]/;
+  for (let i = 0; i < valor.length; i++) {
+    if (valor[i] != valido) {
+      mostrarAlerta();
+      valor.preventDefault();
+    }
+  }
+}
+
 //Funcion para activar o desactivar los botones
 function estadoBoton(valor) {
   let button1 = document.querySelector("#boton1");
