@@ -352,7 +352,8 @@ footer div {
     height: auto;
   }
   .redes {
-    margin: 5px;
     margin-left: 20px;
+    width: 4vw;
+    height: auto;
   }
 }
