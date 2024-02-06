@@ -127,7 +127,7 @@ function desencriptar() {
   desactivarBotones();
   limpiarTextarea();
   mostrarResultado();
-  mostrarResultado(texto, resultado, "encriptado");
+  mostrarResultado(texto, resultado, "desencriptado");
   document.querySelector("#boton-copiar").className = "";
   document.querySelector("#aviso-copiado").className = "ocultar";
 }
